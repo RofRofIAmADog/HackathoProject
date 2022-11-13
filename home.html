@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="home_style.css">
+    <title>Home</title>
+    <script src="controler.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+    <h1 id="title" class="enable">Force on rockets due to planets</h1>
+    <div class="hold1 enable">
+        <p id="up" class="enable">ARE YOU READY?</p>
+    </div>
+    <div class="intro null">
+        <h1 class="title2">Introduction</h1>
+        <div id="intHolder" style="width: 50vw;">
+            <p class="ints">
+                The program is a rudimentary physics engine that approximately simulates the
+                motion of a rocket under the gravitational influence of planets that are placed
+                by the user. The user inputs the positions of the planets, choosing from five
+                different possible masses, and inputs the initial velocity of the rocket.
+            </p>
+            <img src="images/Rocket.png">
+        </div>
+    </div>
+    <div class="work null">
+        <h1 class="title2">How does it work?</h1>
+        <div id="p1">
+            <p class="ints" style="width: 50vw;">
+                The program stores the rocket's position and velocity, updating these values
+                periodically to numerically continue the rocket's trajectory. At the end of each
+                time interval, the program calculates the net force on the rocket in each direction
+                by applying Newton's Law of Gravitation,
+            </p>
+            <p class="equation">\[F_x=-\sum_{p\in\text{PlanetList}}\frac{Gm_p m_{\text{rocket}}}{r_{p,\text{rocket}}^3}(x_{\text{rocket}}-x_p)\]</p>
+            <p class="equation">\[F_y=-\sum_{p\in\text{PlanetList}}\frac{Gm_p m_{\text{rocket}}}{r_{p,\text{rocket}}^3}(y_{\text{rocket}}-y_p)\]</p>
+            <p class="ints">We apply Newton's second law of motion to then obtain the accelerations at that instant.</p>
+            <p class="equation">\[a_x=\frac{F_x}{m_{rocket}}\]</p>
+            <p class="equation">\[a_y=\frac{F_y}{m_{rocket}}\]</p>
+        </div>
+        <div id="p2">
+            <p class="ints" style="width: 50vw;">
+                Then we update the position of the rocket and then the velociy.
+            </p>
+            <p class="equation">\[x=x+v_x\Delta t\]</p>
+            <p class="equation">\[y=y+v_y\Delta t\]</p>
+            <p class="equation">\[v_x=v_x+a_x\Delta t\]</p>
+            <p class="equation">\[v_y=v_y+a_y\Delta t\]</p>
+            <p class="ints" style="width: 50vw;">By repeating this at the end of each time interval, we approximately calculate the rockets trajectory.</p>
+        </div>
+    </div>
+    <div class="work2 null">
+        <h1 class="title2">How does the physics engine work?</h1>
+        <img src="images/Instructions1.png" id="inst1">
+        <img src="images/Instructions2.png" id="inst2" class="null">
+    </div>
+    <div class="end null">
+        <h1 class="title2">Click Space to Play the phyiscs engine</h1>
+    </div>
+</body>
+</html>

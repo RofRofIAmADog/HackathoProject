@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body{
+    background-image: url('images/Space_Background1.png');
+}
+
+#title{
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 50px;
+    font-family: 'Space Mono', monospace;
+    color: blue;
+}
+
+#title.enable{
+	animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes float {
+	0% { 
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes fadeOutO {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#up{
+    text-align: center;
+    margin: 0 auto;
+    color: red;
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 5px;
+}
+
+#up.enable{
+	animation: float 6s ease-in-out infinite;
+}
+
+.hold1.enable{
+    animation: fadeIn 5s;
+}
+
+.disable{
+	animation: fadeOutO 1s ease-out;
+	animation-fill-mode: forwards;
+}
+
+.null{
+    opacity: 0;
+}
+
+.intro{
+	position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 10;
+}
+
+.title2{
+    font-size: 40px;
+    font-family: 'Space Mono', monospace;
+    color: blue;
+}
+
+.ints{
+    color: red;
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 4px;
+}
+
+.intro.enable{
+    animation: fadeIn 5s;
+}
+
+#intHolder{
+    display: flex;
+}
+
+.work{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+}
+
+.work.enable{
+    animation: fadeIn 5s;
+}
+
+.equation{
+    color: red;
+    font-size: 20px;
+}
+
+#p1{
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 10;
+}
+
+#p2{
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 10;
+    opacity: 0;
+}
+
+#p2.enable{
+    animation: fadeIn 5s;
+    animation-fill-mode: forwards;
+}
+
+.work2{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+}
+
+.work2.enable{
+    animation: fadeIn 5s;
+}
+
+#inst1{
+    height: 500px;
+    width: 1000px;
+    position: fixed;
+    top: 26%;
+    left: 10%;
+    z-index: 10;
+}
+
+#inst2{
+    height: 500px;
+    width: 1000px;
+    position: fixed;
+    top: 26%;
+    left: 10%;
+    z-index: 10;
+}
+
+#inst2.enable{
+    animation: fadeIn 5s;
+}
+
+.end{
+    position: fixed;
+    top: 45%;
+    left: 20%;
+}
